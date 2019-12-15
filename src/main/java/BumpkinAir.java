@@ -2,15 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BumpkinAir {
-
+    private Double HoursToLemonWater;
+    static List<PilotClass> pilotClasses = new ArrayList<>();
     static List<Planes> planeSelection = new ArrayList<>(); //this stores all the created planes vv
 
 
     public String createNewPlane() { //method to create an object to add to the plane selection. This refrences the Planes constructor
-        planeSelection.add(new Planes("A380", "Landed", "Bumpkin_Air")); //Ask constructor to add a new object to plane list
-        planeSelection.add(new Planes("747-400", "Landed", "Bumpkin_Air"));
-        planeSelection.add(new Planes("DC-8", "Landed", "Bumpkin_Air"));
+        planeSelection.add(new Planes("A380", "Landed", "Bumpkin_Air", 555)); //Ask constructor to add a new object to plane list
+        planeSelection.add(new Planes("747-400", "Landed", "Bumpkin_Air", 416));
+        planeSelection.add(new Planes("DC-8", "Landed", "Bumpkin_Air", 269));
         return "planes added";
+    }
+
+    public String createPilot(){
+        pilotClasses.add(new PilotClass());
+
+        return "pilot added";
     }
 
 

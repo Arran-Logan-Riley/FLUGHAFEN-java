@@ -8,15 +8,19 @@ public class Planes {
     private String flightStatus;
     private String location;
     private String AirPortActivity;
+    private int MaxPassengers;
+    private String LandingGearStatus;
 
     //constructor
-    public Planes(String planeType, String flightStatus, String location){
+    public Planes(String planeType, String flightStatus, String location, int MaxPassengers){
         this.planeType = planeType;
         this.flightStatus = flightStatus;
         this.fuelLevel = 0;
         this.passengerCount = 0;
         this.location = location;
         this.AirPortActivity = "";
+        this.MaxPassengers = MaxPassengers;
+        this.LandingGearStatus = "Deployed";
     }
 
     //methods
@@ -66,4 +70,20 @@ public class Planes {
     public String getLocation(){
         return this.location;
     }
+
+    //setAirport Activity----------//S
+    public void setAirPortActivity(String flightActivit){ this.AirPortActivity = flightActivit; }
+
+    //getAirPort Activity--------------//G
+    public String getAirPortActivity (){return this.AirPortActivity; }
+
+    //getMaxPassengers Activity----------//S
+    public int getMaxPassengers(){return  this.MaxPassengers;}
+
+
+    //setLanding gear
+    public void setLandingGearStatus(String landingGearStatus){this.LandingGearStatus = landingGearStatus;}
+
+    //getLanding gear
+    public String getLandingGearStatus(){return this.LandingGearStatus;}
 }
